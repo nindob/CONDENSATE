@@ -4,35 +4,50 @@
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 250px;
     color: 	#3e3e3e;
 }
 
 .desc {
     font-size: 200%;
     font-family: 'Josefin Sans', sans-serif;
+    margin: auto;
+    width: 1500px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
     color: 	#424242;
+    text-align: center;
 }
 
 .inputs {
     display: flex;
     justify-content: center;
+    padding: 10px;
+    margin: auto;
     margin-top: 50px;
+
 }
 .txtinput {
+    border: none;
+    border: solid 1px white;
+    border-radius: 10px;
     width: 200pxpx;
-    height: 100px;
+    height: 50px;
 }
 
 .wordlimit {
+    border: none;
+    border: solid 1px white;
+    border-radius: 10px;
     width: 100px;
-    height: 100px;
+    height: 50px;
 }
 
 .button {
+    border: none;
+    border: solid 1px white;
+    border-radius: 10px;
     width: 100px;
-    height: 100px;
+    height: 50px;
 }
