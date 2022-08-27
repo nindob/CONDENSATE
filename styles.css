@@ -66,6 +66,9 @@
 
 .endboard {
     display: flex;
+    font-size: 140%;
+    width: 90%;
+    height: 800px;
     justify-content: center;
     padding: 10px;
     margin: auto;
@@ -75,8 +78,6 @@
     border: solid 1px #e2e1d6;
     border-radius: 30px;
     background-color: white;
-    width: 90%;
-    height: 800px;
     font-family: 'Josefin Sans', sans-serif;
 
 }
