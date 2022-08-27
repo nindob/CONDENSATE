@@ -26,8 +26,13 @@
     padding: 10px;
     margin: auto;
     margin-top: 50px;
-
 }
+
+.button:active {
+    background: white;
+    color: #424242;
+}    
+
 .txtinput {
     border: none;
     border: solid 1px white;
@@ -36,6 +41,7 @@
     height: 50px;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
+    box-sizing:border-box;
 }
 
 .wordlimit {
@@ -44,7 +50,7 @@
     border-radius: 30px;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-    width: 100px;
+    width: 200px;
     height: 50px;
 }
 
@@ -52,7 +58,7 @@
     border: none;
     border: solid 1px #e2e1d6;
     border-radius: 30px;
-    width: 100px;
+    width: 200px;
     height: 50px;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
