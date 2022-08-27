@@ -44,16 +44,6 @@
     box-sizing:border-box;
 }
 
-.wordlimit {
-    border: none;
-    border: solid 1px white;
-    border-radius: 30px;
-    font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
-    width: 200px;
-    height: 50px;
-}
-
 .button {
     border: none;
     border: solid 1px #e2e1d6;
