@@ -4,7 +4,7 @@
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
     justify-content: center;
-    margin-top: 250px;
+    margin-top: 10vh;
     color: 	#3e3e3e;
 }
 
@@ -70,6 +70,7 @@
     padding: 10px;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 10vh;
     border: none;
     border: solid 1px #e2e1d6;
     border-radius: 30px;
