@@ -14,7 +14,7 @@ function createArticleID() {
           "messages": [
             {
               "payload": {
-                "content": (RAWTEXT),
+                "content": "this is a stringfile",
                 "contentType": "text/plain"
               },
               "from": {
@@ -47,5 +47,6 @@ function createSummary() {
 }
 
 function printEndResult() {
-  document.getElementById('endresult').innerText = "test";
+  let endResult = "test"
+  document.getElementById('endresult').innerText = endResult;
 }
