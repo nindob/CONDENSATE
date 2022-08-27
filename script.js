@@ -1,3 +1,4 @@
+
 function processInput() {
     let linkInput = document.getElementsByClassName("txtinput")
     var settings = {
