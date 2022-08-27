@@ -45,3 +45,7 @@ function createSummary() {
         console.log(response);
       });
 }
+
+function printEndResult() {
+  document.getElementById('endresult').innerText = "test";
+}
