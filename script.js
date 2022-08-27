@@ -1,5 +1,5 @@
 
-function processInput() {
+function createArticleID() {
     let linkInput = document.getElementsByClassName("txtinput")
     var settings = {
         "url": "https://api.symbl.ai/v1/process/text",
