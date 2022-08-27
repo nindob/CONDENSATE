@@ -1,6 +1,6 @@
 
 function createArticleID() {
-    var articleText = "I am an 84-year-old gentleman who stands 5’4” tall from the basketball-crazy state of Indiana. Recently, my wife and I were having dinner at a local restaurant. Our waiter was a young man, around 6’8”. Naturally, I asked him if he played basketball. He looked down at me, replied, “Yes, I do,” and then asked me if I played miniature golf."
+    var articleText = "cats are cute"
     var settings = {
         "url": "https://api.symbl.ai/v1/process/text",
         "method": "POST",
@@ -18,8 +18,8 @@ function createArticleID() {
                 "contentType": "text/plain"
               },
               "from": {
-                "name": "John",
-                "userId": "john@example.com"
+                "name": "User",
+                "userId": "UserId"
               }
             }
           ]
@@ -28,14 +28,12 @@ function createArticleID() {
       
       $.ajax(settings).done(function (response) {
         console.log(response);
-        ID = Object.values(response)
-        console.log(ID[0])
+        ID = Object.values(response);
       });
 }
 
 function createSummary() {
     var urlID = "https://api-labs.symbl.ai/v1/conversations/"
-    console.log(ID[0])
     urlID += ID[0]
     urlID += "/summary?eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFVUTRNemhDUVVWQk1rTkJNemszUTBNMlFVVTRRekkyUmpWQ056VTJRelUxUTBVeE5EZzFNUSJ9.eyJodHRwczovL3BsYXRmb3JtLnN5bWJsLmFpL3VzZXJJZCI6IjQ4Nzk1MTA0ODMyMzg5MTIiLCJpc3MiOiJodHRwczovL2RpcmVjdC1wbGF0Zm9ybS5hdXRoMC5jb20vIiwic3ViIjoiY0hXT1ZsOXNJSlp0d29mREZuVlY5SlBYb3VhMG1ObHZAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vcGxhdGZvcm0ucmFtbWVyLmFpIiwiaWF0IjoxNjYxNjA5ODE1LCJleHAiOjE2NjE2OTYyMTUsImF6cCI6ImNIV09WbDlzSUpadHdvZkRGblZWOUpQWG91YTBtTmx2IiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.XGtaIRNTHPNV_t_aaZJVia7vND423Y-8EQOPt3Rc_Q7DmL29j_k9kPYf-OVHRXmRwuyD8OFXcA_BavutAuJv1IFE8iwJER4myLM9ZElEcYRUiWO1t5NZNUrIVSa4lx7Jh0bK5Gfga-trumPBd1MTZGpyP27IHGs2xUNubLRALTAdx-WmdM4kIHrZpAe8fUwCWIbXSvoHztCuz-q9BEnhPvIl91Tl7jsmdELRzQaT65AWI-Dppth_z5_Ljeptj_suUZDPeymzGqlpK-P364qyPXhBopgKI_9M5PqoNRaZ6jDqNg4g0Dmi80lgh2t744uEJ_S0l6sKUiGI9q4pzPf3ww"
     var settings = {
@@ -48,11 +46,14 @@ function createSummary() {
     };
     
     $.ajax(settings).done(function (response) {
-      console.log(response);
+      console.log(response)
+      summary = (JSON.stringify(response))
+      nukedtext = summary.split('"',12)
+      printEndResult()
     });
 }
 
 function printEndResult() {
-  let endResult = "test"
+  let endResult = nukedtext[9]
   document.getElementById('endresult').innerText = endResult;
 }
