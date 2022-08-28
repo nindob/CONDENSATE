@@ -1,6 +1,7 @@
 
 function createArticleID() {
-    var articleText = document.getElementById("article").text;
+    var articleText = document.getElementById("article").value;
+    console.log(articleText)
     var settings = {
         "url": "https://api.symbl.ai/v1/process/text",
         "method": "POST",
