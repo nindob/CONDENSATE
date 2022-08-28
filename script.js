@@ -36,7 +36,7 @@ function createArticleID() {
 
 setTimeout(function() {
   createSummary()
-}, 3000);
+}, 5000);
 
 function createSummary() {
     var urlID = "https://api-labs.symbl.ai/v1/conversations/"
