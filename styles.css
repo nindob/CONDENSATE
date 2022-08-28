@@ -1,13 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 .title {
+    text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #e2e1d6 0%,
+    #424242 67%,
+    #3e3e3e 100%
+  );
+
     font-size: 500%;
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
     justify-content: center;
     margin-top: 10vh;
-    color: 	#3e3e3e;
+    background-size: auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 6s linear infinite;
 }
 
+@keyframes textclip {
+    to {
+      background-position: 100% center;
+    }
+  }
 .desc {
     font-size: 200%;
     font-family: 'Josefin Sans', sans-serif;
