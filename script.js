@@ -1,6 +1,6 @@
 
 function createArticleID() {
-    var articleText = 'A man rescued a dying bunny that was drowning in his pool after spotting a strange reflection out of the corner of his eye. The Arizona resident noticed the rabbit while walking back inside from his backyard. He found the bunny just as it had stopped moving, clearly exhausted, and began dropping its head underwater. The 35-year-old frantically scrambled to find his pool scooper and get the bunny to safety. The man, who makes YouTube videos, then grabbed his camera and began filming the situation. Initially, the bunny was too tired and far too weak to even move—occasionally it would try to raise its head but even that was too strenuous. The content creator from Lake Havasu City, moved the rabbit into the sunlight and fed it vegetables, sitting with the animal for several hours hoping it would begin to warm up and get some strength. “I sat the entire time so no predators could get it whilst it was still vulnerable. “I didn’t touch it with my hands. The closest we got was when it sat in between my feet for a while. Slowly, it started moving more and then it eventually just hopped away. A few days later he saw it again and absolutely knew it recognized him. The bunny came over really close to him and looked at him for a while before hopping off—which he sees as a sign that the animal knew just who he was and was grateful.'
+    var articleText = document.getElementsByClassName("txtInput").text;
     var settings = {
         "url": "https://api.symbl.ai/v1/process/text",
         "method": "POST",
