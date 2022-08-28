@@ -11,6 +11,19 @@ function netScrape() {
       getText().then(data => console.log(data));
 }
 
+function netScrape1() {
+    async function getText() {
+        let response = await 
+        fetch(
+          "https://api.apify.com/v2/acts/apify~web-scraper/runs/last/dataset/items?token=apify_api_3aiAUEfeDgIUZkfDMiodUa0eT7kop50nreKB"
+        );
+        let data = await response.json();
+        return data;
+      }
+      getText().then(data => console.log(data));
+}
+//^this is basically a backup code that calls the most recent run of the api. It should give you text file of the national geographic url I'm sending you
+
 function createArticleID() {
     var articleText = 'A man rescued a dying bunny that was drowning in his pool after spotting a strange reflection out of the corner of his eye. The Arizona resident noticed the rabbit while walking back inside from his backyard. He found the bunny just as it had stopped moving, clearly exhausted, and began dropping its head underwater. The 35-year-old frantically scrambled to find his pool scooper and get the bunny to safety. The man, who makes YouTube videos, then grabbed his camera and began filming the situation. Initially, the bunny was too tired and far too weak to even move—occasionally it would try to raise its head but even that was too strenuous. The content creator from Lake Havasu City, moved the rabbit into the sunlight and fed it vegetables, sitting with the animal for several hours hoping it would begin to warm up and get some strength. “I sat the entire time so no predators could get it whilst it was still vulnerable. “I didn’t touch it with my hands. The closest we got was when it sat in between my feet for a while. Slowly, it started moving more and then it eventually just hopped away. A few days later he saw it again and absolutely knew it recognized him. The bunny came over really close to him and looked at him for a while before hopping off—which he sees as a sign that the animal knew just who he was and was grateful.'
     var settings = {
