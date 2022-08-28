@@ -30,13 +30,9 @@ function createArticleID() {
         console.log(response);
         ID = Object.values(response);
         console.log(ID[0])
-        setTimeout(createSummary())
+        const myTimeout = setTimeout(createSummary, 2000);
       });
 }
-
-setTimeout(function() {
-  createSummary()
-}, 5000);
 
 function createSummary() {
     var urlID = "https://api-labs.symbl.ai/v1/conversations/"
