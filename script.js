@@ -1,7 +1,7 @@
 function netScrape() {
     async function getText() {
         let response = await fetch(
-          "https://api.apify.com/v2/acts/apify~web-scraper/run-sync-get-dataset-items?token=apify_api_3aiAUEfeDgIUZkfDMiodUa0eT7kop50nreKB"
+          "https://www.nationalgeographic.com/environment/article/big-changes-are-coming-for-the-colorado-river-soonand-they-could-get-messy"
         );
         let data = await response.json();
         return data;
