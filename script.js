@@ -1,8 +1,47 @@
 function netScrape() {
     async function getText() {
-        let response = await Content-Type: application/json
-        fetch(
-          "https://api.apify.com/v2/acts/apify~web-scraper/runs?token=apify_api_3aiAUEfeDgIUZkfDMiodUa0eT7kop50nreKB"
+        let response = await Content-Type:{
+  "runMode": "DEVELOPMENT",
+  "startUrls": [
+    {
+      "url": "https://www.nationalgeographic.com/environment/article/big-changes-are-coming-for-the-colorado-river-soonand-they-could-get-messy"
+    }
+  ],
+  "keepUrlFragments": false,
+  "linkSelector": "",
+  "pseudoUrls": [],
+  "pageFunction": "// The function accepts a single argument: the \"context\" object.\n// For a complete list of its properties and functions,\n// see https://apify.com/apify/web-scraper#page-function \nasync function pageFunction(context) {\n    // This statement works as a breakpoint when you're trying to debug your code. Works only with Run mode: DEVELOPMENT!\n    // debugger; \n\n    // jQuery is handy for finding DOM elements and extracting data from them.\n    // To use it, make sure to enable the \"Inject jQuery\" option.\n    const $ = context.jQuery;\n   \n    return {\n        url: context.request.url,\n        pageTitle: $(\"p\").text(),\n    };\n}",
+  "injectJQuery": true,
+  "injectUnderscore": false,
+  "proxyConfiguration": {
+    "useApifyProxy": true
+  },
+  "initialCookies": [],
+  "useChrome": false,
+  "useStealth": false,
+  "ignoreSslErrors": false,
+  "ignoreCorsAndCsp": false,
+  "downloadMedia": true,
+  "downloadCss": true,
+  "waitUntil": [
+    "networkidle2"
+  ],
+  "preNavigationHooks": "// We need to return array of (possibly async) functions here.\n// The functions accept two arguments: the \"crawlingContext\" object\n// and \"gotoOptions\".\n[\n    async (crawlingContext, gotoOptions) => {\n        // ...\n    },\n]\n",
+  "postNavigationHooks": "// We need to return array of (possibly async) functions here.\n// The functions accept a single argument: the \"crawlingContext\" object.\n[\n    async (crawlingContext) => {\n        // ...\n    },\n]",
+  "breakpointLocation": "NONE",
+  "debugLog": false,
+  "browserLog": false,
+  "customData": {},
+  "proxyRotation": "RECOMMENDED",
+  "maxRequestRetries": 3,
+  "maxPagesPerCrawl": 0,
+  "maxResultsPerCrawl": 0,
+  "maxCrawlingDepth": 0,
+  "maxConcurrency": 50,
+  "pageLoadTimeoutSecs": 60,
+  "pageFunctionTimeoutSecs": 60
+} fetch(
+          "https://api.apify.com/v2/acts/apify~web-scraper/run-sync-get-dataset-items?/&token=apify_api_3aiAUEfeDgIUZkfDMiodUa0eT7kop50nreKB"
         );
         let data = await response.json();
         return data;
