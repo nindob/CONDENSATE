@@ -55,11 +55,15 @@
 }    
 
 .txtinput {
+    display: flex;
     border: none;
     border: solid 1px white;
     border-radius: 30px;
-    width: 500px;
-    height: 50px;
+    padding: 20px;
+    margin: auto;
+    width: 750px;
+    height: 750px;
+    height: fit-content;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     box-sizing:border-box;
